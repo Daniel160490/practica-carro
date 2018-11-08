@@ -1,0 +1,75 @@
+/**
+ * 
+ */
+package es.indra.carrocompra.sistema;
+
+import java.util.Scanner;
+
+import es.indra.carrocompra.means.Producto;
+
+/**
+ * @author daniel
+ *
+ */
+public class Sistema {
+
+	
+	public void menuPrincipal() {
+		
+		Scanner entrada1 = new Scanner(System.in);
+        Producto productos = new Producto();
+        char opcion;
+        char continuar;
+        
+        
+        
+        do {
+        	
+        	System.out.println("\t\t+--------------------------------------------------+");
+            System.out.println("\t\t|                -- MENU SISTEMA --                |");
+            System.out.println("\t\t+--------------------------------------------------+");
+            System.out.println("\t\t|                                                  |");
+            System.out.println("\t\t|  1) EMPRESA                   				   |");
+            System.out.println("\t\t|  2) CLIENTE                  					   |");
+            System.out.println("\t\t+--------------------------------------------------+");
+            System.out.println("Pulse 'n' para Salir");
+            System.out.println("SELECCIONE UNA OPCION: ");
+
+            opcion= entrada1.next().charAt(0);
+            
+            switch(opcion) {
+            case 1:
+            	//EMPRESA
+            {
+            	
+            }
+            	break;
+            case 2:
+            	//CLIENTE
+            {
+            	System.out.println("\t\t+--------------------------------------------------+");
+                System.out.println("\t\t|                -- MENU CLIENTE --                |");
+                System.out.println("\t\t+--------------------------------------------------+");
+                System.out.println("\t\t|           CATEGORÍAS DE PRODUCTOS                |");
+                System.out.println("\t\t|  1) EMPRESA                   				   |");
+                System.out.println("\t\t|  2) CLIENTE                  					   |");
+                System.out.println("\t\t+--------------------------------------------------+");
+                System.out.println("Pulse 'n' para Salir");
+                System.out.println("SELECCIONE UNA OPCION: ");
+            	switch(opcion) {
+            	
+            	}
+            }
+            	break;
+            }
+            
+            
+            
+        	
+        }while(opcion != 'n');
+        
+        System.out.println("\t\t************************");
+        System.out.println("\t\t*** FIN DEL PROGRAMA ***");
+        System.out.println("\t\t************************");
+	}
+}

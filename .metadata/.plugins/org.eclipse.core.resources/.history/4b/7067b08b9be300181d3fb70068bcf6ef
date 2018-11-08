@@ -1,0 +1,16 @@
+/**
+ * 
+ */
+package es.indra.carrocompra.sistema;
+
+/**
+ * @author daniel
+ *
+ */
+public class Sistema {
+
+	
+	public void menuPrincipal() {
+		
+	}
+}

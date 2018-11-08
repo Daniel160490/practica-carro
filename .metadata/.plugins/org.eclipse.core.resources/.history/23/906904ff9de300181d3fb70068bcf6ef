@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package es.indra.carrocompra.means;
+
+/**
+ * @author daniel
+ *
+ */
+public class Categoria {
+
+}

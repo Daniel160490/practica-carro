@@ -1,0 +1,17 @@
+/**
+ * 
+ */
+package es.indra.carrocompra.means;
+
+/**
+ * @author daniel
+ *
+ */
+public class Producto {
+	nombre, descripción, categoría y precio
+	private int id;
+	private String nombre;
+	private String descripcion;
+	private double precio;
+	private int stock;
+}
