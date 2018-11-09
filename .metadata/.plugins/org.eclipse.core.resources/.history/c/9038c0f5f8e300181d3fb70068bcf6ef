@@ -20,10 +20,8 @@ public class Main {
 		
 		Categoria categorias = new Categoria();
 		categorias.setNombre("Alimentacion");
-		categorias.setNombre("Perfumeria");
-		categorias.setNombre("Limpieza");
-		
-		
+		categorias.setNombre("");
+		categorias.setNombre("");
 		/*
 		 * Llamada al menu principal de la practica
 		 */

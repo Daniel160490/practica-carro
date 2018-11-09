@@ -22,8 +22,6 @@ public class Main {
 		categorias.setNombre("Alimentacion");
 		categorias.setNombre("Perfumeria");
 		categorias.setNombre("Limpieza");
-		
-		
 		/*
 		 * Llamada al menu principal de la practica
 		 */

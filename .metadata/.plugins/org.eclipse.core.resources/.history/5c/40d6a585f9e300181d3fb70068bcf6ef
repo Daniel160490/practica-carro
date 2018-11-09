@@ -32,17 +32,6 @@ public class Sistema {
 		
 	}
 	
-	
-	
-	/*
-	 * @brief Modulo que muestra una lista de productos de una categoria
-	 * @return Devuelve la lista de productos de una categoria.
-	 */
-	public void mostrarListaProductos(){
-	        
-	      //HACEMOS UN METODO PARA CADA CATEGORIA?¿? NO SE :(
-	}
-	
 	/*
 	 * Metodo que contiene el menu principal de la practica
 	 * En este menu se realizan llamadas a los diferentes metodos 

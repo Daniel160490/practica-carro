@@ -3,7 +3,6 @@
  */
 package es.indra.carrocompra.main;
 
-import es.indra.carrocompra.means.Categoria;
 import es.indra.carrocompra.sistema.Sistema;
 
 
@@ -17,11 +16,6 @@ public class Main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		
-		Categoria categorias = new Categoria();
-		categorias.setNombre("Alimentacion");
-		categorias.setNombre("Perfumeria");
-		categorias.setNombre("Limpieza");
 		
 		
 		/*
