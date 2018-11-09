@@ -3,8 +3,12 @@
  */
 package es.indra.carrocompra.sistema;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 import java.util.Scanner;
 
+import es.indra.carrocompra.means.Categoria;
 import es.indra.carrocompra.means.Producto;
 
 
@@ -33,6 +37,31 @@ public class Sistema {
 	}
 	
 	
+	/*
+	 * 
+	 */
+	public static List<Producto> generarProductos(String nombre, double precio, String descripcion, Categoria cat){
+		List<Producto> productos = new ArrayList<>();
+		
+		for (int i = 0; i < 10; i++) {
+			Producto prod = new Producto();
+			prod.setId(i);
+			prod.setNombre(nombre);
+			prod.setDescripcion(descripcion);
+			
+			char c1 = (char)new Random().nextInt(50);
+			char c2 = (char)new Random().nextInt(50);
+			
+			prod.setPrecio(precio);
+			prod.setDescripcion("" + new Random().nextInt(100));
+			prod.setCategoria(cat);
+			//prod.setVuelo(p.getVuelos().get(new Random().nextInt(p.getVuelos().size())));
+			
+			productos.add(prod);
+		}
+		
+		return productos;
+	}
 	
 	/*
 	 * @brief Modulo que muestra una lista de productos de una categoria

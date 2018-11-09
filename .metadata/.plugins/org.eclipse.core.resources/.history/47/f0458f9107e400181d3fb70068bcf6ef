@@ -1,0 +1,36 @@
+/**
+ * 
+ */
+package es.indra.carrocompra.main;
+
+import es.indra.carrocompra.means.Categoria;
+import es.indra.carrocompra.sistema.Sistema;
+
+
+/**
+ * @author daniel
+ *
+ */
+public class Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		Categoria categorias = new Categoria();
+		categorias.setNombre("Alimentacion");
+		categorias.setNombre("Perfumeria");
+		categorias.setNombre("Limpieza");
+		
+		
+		/*
+		 * Llamada al menu principal de la practica
+		 */
+		Sistema sistema = new Sistema();
+		sistema.menuPrincipal();
+		
+
+	}
+
+}

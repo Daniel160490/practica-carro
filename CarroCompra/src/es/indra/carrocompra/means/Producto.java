@@ -14,6 +14,7 @@ public class Producto extends Categoria {
 	private String descripcion;
 	private double precio;
 	private int stock;
+	private Categoria categoria;
 	
 	
 	/**
@@ -32,13 +33,14 @@ public class Producto extends Categoria {
 	 * @param precio
 	 * @param stock
 	 */
-	public Producto(int id, String nombre, String descripcion, double precio, int stock) {
+	public Producto(int id, String nombre, String descripcion, double precio, int stock, Categoria categoria) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
 		this.descripcion = descripcion;
 		this.precio = precio;
 		this.stock = stock;
+		this.categoria = categoria;
 	}
 	
 	
@@ -120,4 +122,23 @@ public class Producto extends Categoria {
 	public void setStock(int stock) {
 		this.stock = stock;
 	}
+
+
+	/**
+	 * @return the categoria
+	 */
+	public Categoria getCategoria() {
+		return categoria;
+	}
+
+
+	/**
+	 * @param categoria the categoria to set
+	 */
+	public void setCategoria(Categoria categoria) {
+		this.categoria = categoria;
+	}
+	
+	
+	
 }

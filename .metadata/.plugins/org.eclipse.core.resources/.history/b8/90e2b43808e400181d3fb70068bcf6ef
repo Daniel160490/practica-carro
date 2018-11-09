@@ -1,0 +1,55 @@
+/**
+ * 
+ */
+package es.indra.carrocompra.main;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import es.indra.carrocompra.means.Categoria;
+import es.indra.carrocompra.means.Producto;
+import es.indra.carrocompra.sistema.Sistema;
+
+
+/**
+ * @author daniel
+ *
+ */
+public class Main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		Categoria categorias = new Categoria();
+		Sistema sistema = new Sistema();
+		
+		categorias.setNombre("Alimentacion");
+		categorias.setNombre("Perfumeria");
+		categorias.setNombre("Limpieza");
+		
+		Producto p = new Producto();
+		
+		p.setId(10);
+		p.setNombre("Coca-Ccola"); 
+		p.setDescripcion("Producto liquido");
+		//p.setVuelos(vuelosPasajero);
+		
+	sistema.generarProductos(nombre, precio, descripcion, cat)
+		Map<String, List<Producto>> billetesEmitidos = new HashMap<>();
+		
+		billetesEmitidos.put("08/11/2018", sistema.generarProductos("Coca-Cola",2,90, "Producto liquido", p));
+		billetesEmitidos.put("01/01/2019", generarBilletes("01/01/2019", p));
+		
+		/*
+		 * Llamada al menu principal de la practica
+		 */
+		Sistema sistema = new Sistema();
+		sistema.menuPrincipal();
+		
+
+	}
+
+}
