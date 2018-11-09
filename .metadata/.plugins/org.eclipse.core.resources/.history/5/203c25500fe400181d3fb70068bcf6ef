@@ -25,27 +25,18 @@ import es.indra.carrocompra.beans.Producto;
  */
 public class Sistema {
 
-	ArrayList<Producto> productos = new ArrayList();
-	public int totalProductos;
-	public void setTotalProductos(int totalProductos){this.totalProductos=totalProductos;}
-	public int getTotalProductos(){return totalProductos;}
-	
-	
 	/*
 	 * Metodo que va a aumentar el stock de los productos
 	 */
-	public void aumentarStock(Producto nuevoProducto) {
-		this.productos.add(nuevoProducto);
-		this.setTotalProductos(this.getTotalProductos()+1);
+	public void aumentarStock() {
 		
 	}
 	
 	/*
 	 * Metodo que va a disminuir el stock de los productos
 	 */
-	public void disminuirStock(Producto nuevoProducto) {
-		this.productos.remove(nuevoProducto);
-        this.setTotalProductos(this.getTotalProductos()-1);
+	public void disminuirStock() {
+		
 	}
 	
 	
@@ -58,6 +49,58 @@ public class Sistema {
 	      //HACEMOS UN METODO PARA CADA CATEGORIA?¿? NO SE :(
 	}
 	
+	
+	/*
+	 * 
+	 */
+	public void guardarHistorial() {
+		
+		FileWriter fichero = null;
+        PrintWriter pw = null;
+
+        try
+        {
+        	/*
+        	 * Lo genera en el directorio del proyecto
+        	 */
+        	fichero = new FileWriter("Historial-compras.txt");
+           	pw = new PrintWriter(fichero);
+ 
+           	List<Cliente> productos = new ArrayList<>();
+           	productos.add(new Cliente());
+           	productos.add(new Cliente());
+           	productos.add(new Cliente());
+           	//p.add(new Persona("Daniel","Garcia","75747362C",1));
+           	
+           	List<Persona> personas = generarPersonas();
+           	System.out.println("Guardando pasajeros.txt");
+           	
+           	for (Persona persona : personas) {
+	           	StringBuilder sb = new StringBuilder();
+	           	sb.append(persona.getApellido());
+	           	sb.append(";");
+	           	sb.append(persona.getNombre());
+	           	sb.append(";");
+	           	
+           	}
+           	
+           	
+           	/*for (int i = 0; i < p.size(); i++) {
+        	   pw.println("-> " + p.get(i) + ";");
+           	}*/
+ 
+        } catch (Exception e) {
+        	e.printStackTrace();
+        } finally {
+        	try {
+    			// Finally se va a encargar de comprobar que se cierra el fichero
+        		if (null != fichero)
+        			fichero.close();
+        	} catch (Exception e2) {
+        		e2.printStackTrace();
+        	}
+        }
+	}
 	
 	/*
 	 * Metodo que contiene el menu principal de la practica
@@ -79,8 +122,6 @@ public class Sistema {
 		cliente.setTelefono(639981209);
 		// ---  INICIALIZACION DE CLIENTE
         
-		
-		
         System.out.println("\t\t+--------------------------------------------------+");
         System.out.println("\t\t|     -- BIENVENIDOS AL SISTEMA DE COMPRA --       |");
         System.out.println("\t\t+--------------------------------------------------+");

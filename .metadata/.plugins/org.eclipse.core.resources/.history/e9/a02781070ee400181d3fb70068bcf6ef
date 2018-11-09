@@ -21,7 +21,31 @@ import es.indra.carrocompra.sistema.Sistema;
  */
 public class Main {
 	
-	
+	/*
+	 * 
+	 */
+	private static List<Producto> generarProductos(String nombre, double precio, String descripcion, Categoria cat){
+		List<Producto> productos = new ArrayList<>();
+		
+		for (int i = 0; i < 10; i++) {
+			Producto prod = new Producto();
+			prod.setId(i);
+			prod.setNombre(nombre);
+			prod.setDescripcion(descripcion);
+			
+			char c1 = (char)new Random().nextInt(50);
+			char c2 = (char)new Random().nextInt(50);
+			
+			prod.setPrecio(precio);
+			prod.setDescripcion("" + new Random().nextInt(100));
+			prod.setCategoria(cat);
+			//prod.setVuelo(p.getVuelos().get(new Random().nextInt(p.getVuelos().size())));
+			
+			productos.add(prod);
+		}
+		
+		return productos;
+	}
 
 	/**
 	 * @param args

@@ -27,7 +27,7 @@ public class Sistema {
 
 	ArrayList<Producto> productos = new ArrayList();
 	public int totalProductos;
-	public void setTotalProductos(int totalProductos){this.totalProductos=totalProductos;}
+	public void setTotalProducto(int totalPokemon){this.totalPokemon=totalPokemon;}
 	public int getTotalProductos(){return totalProductos;}
 	
 	
@@ -36,16 +36,24 @@ public class Sistema {
 	 */
 	public void aumentarStock(Producto nuevoProducto) {
 		this.productos.add(nuevoProducto);
-		this.setTotalProductos(this.getTotalProductos()+1);
 		
 	}
+	
+	
+	/*
+	    * @brief Metodo que añade un nuevo Pokemon al sistema.
+	    */
+	    public void addPokemonSistema(Pokemon nuevoPokemon) {
+	        
+	        this.productos.add(nuevoPokemon);
+	        this.setTotalProductos(this.getTotalProductos()+1);
+	    }
 	
 	/*
 	 * Metodo que va a disminuir el stock de los productos
 	 */
-	public void disminuirStock(Producto nuevoProducto) {
-		this.productos.remove(nuevoProducto);
-        this.setTotalProductos(this.getTotalProductos()-1);
+	public void disminuirStock() {
+		
 	}
 	
 	

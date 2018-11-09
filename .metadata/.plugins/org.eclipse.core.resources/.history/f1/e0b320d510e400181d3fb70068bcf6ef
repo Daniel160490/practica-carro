@@ -45,7 +45,7 @@ public class Sistema {
 	 */
 	public void disminuirStock(Producto nuevoProducto) {
 		this.productos.remove(nuevoProducto);
-        this.setTotalProductos(this.getTotalProductos()-1);
+        this.setTotalPokemon(this.getTotalProductos()-1);
 	}
 	
 	

@@ -25,27 +25,18 @@ import es.indra.carrocompra.beans.Producto;
  */
 public class Sistema {
 
-	ArrayList<Producto> productos = new ArrayList();
-	public int totalProductos;
-	public void setTotalProductos(int totalProductos){this.totalProductos=totalProductos;}
-	public int getTotalProductos(){return totalProductos;}
-	
-	
 	/*
 	 * Metodo que va a aumentar el stock de los productos
 	 */
-	public void aumentarStock(Producto nuevoProducto) {
-		this.productos.add(nuevoProducto);
-		this.setTotalProductos(this.getTotalProductos()+1);
+	public void aumentarStock() {
 		
 	}
 	
 	/*
 	 * Metodo que va a disminuir el stock de los productos
 	 */
-	public void disminuirStock(Producto nuevoProducto) {
-		this.productos.remove(nuevoProducto);
-        this.setTotalProductos(this.getTotalProductos()-1);
+	public void disminuirStock() {
+		
 	}
 	
 	
@@ -58,6 +49,13 @@ public class Sistema {
 	      //HACEMOS UN METODO PARA CADA CATEGORIA?¿? NO SE :(
 	}
 	
+	
+	/*
+	 * 
+	 */
+	public void guardarHistorial() {
+		
+	}
 	
 	/*
 	 * Metodo que contiene el menu principal de la practica
@@ -79,8 +77,6 @@ public class Sistema {
 		cliente.setTelefono(639981209);
 		// ---  INICIALIZACION DE CLIENTE
         
-		
-		
         System.out.println("\t\t+--------------------------------------------------+");
         System.out.println("\t\t|     -- BIENVENIDOS AL SISTEMA DE COMPRA --       |");
         System.out.println("\t\t+--------------------------------------------------+");

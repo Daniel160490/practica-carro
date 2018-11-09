@@ -44,8 +44,7 @@ public class Sistema {
 	 * Metodo que va a disminuir el stock de los productos
 	 */
 	public void disminuirStock(Producto nuevoProducto) {
-		this.productos.remove(nuevoProducto);
-        this.setTotalProductos(this.getTotalProductos()-1);
+		
 	}
 	
 	
