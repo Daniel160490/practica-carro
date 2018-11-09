@@ -152,12 +152,6 @@ public class Producto extends Categoria {
 	}
 
 
-	public void addProductoCliente(Producto producto) {
-		
-		
-	}
-
-
 	
 	
 }

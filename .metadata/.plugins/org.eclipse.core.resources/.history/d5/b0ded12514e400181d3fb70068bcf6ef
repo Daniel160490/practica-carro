@@ -153,11 +153,12 @@ public class Producto extends Categoria {
 
 
 	public void addProductoCliente(Producto producto) {
-		
+		ArrayList<Producto> productos = new ArrayList();
+		this.productos.add(nuevoProd);
+		this.setTotalProductos(this.getTotalProductos()+1);
 		
 	}
-
-
+	
 	
 	
 }

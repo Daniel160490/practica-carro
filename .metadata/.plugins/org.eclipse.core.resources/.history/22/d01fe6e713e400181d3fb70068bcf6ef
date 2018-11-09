@@ -50,8 +50,7 @@ public class Sistema {
 	
 	public void addProductoCliente(Producto nuevoProd) {
 		
-		this.productos.add(nuevoProd);
-		this.setTotalProductos(this.getTotalProductos()+1);
+		
 	}
 	/*
 	 * Metodo para comprar un producto seleccionado de una lista

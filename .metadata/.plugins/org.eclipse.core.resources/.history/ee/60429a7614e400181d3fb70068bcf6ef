@@ -154,7 +154,10 @@ public class Producto extends Categoria {
 
 	public void addProductoCliente(Producto producto) {
 		
-		
+		this.vectorH.add(nuevaHab); 
+        //System.out.println("la dimesion despues " + this.vectorH.size() +"");
+        //Coge el total de Habilidades en el Vector (Útiles) y suma 1.
+        this.setTotalHabilidades(this.getTotalHabilidades()+1);
 	}
 
 

@@ -48,11 +48,6 @@ public class Sistema {
         this.setTotalProductos(this.getTotalProductos()-1);
 	}
 	
-	public void addProductoCliente(Producto nuevoProd) {
-		
-		this.productos.add(nuevoProd);
-		this.setTotalProductos(this.getTotalProductos()+1);
-	}
 	/*
 	 * Metodo para comprar un producto seleccionado de una lista
 	 * 
@@ -73,7 +68,7 @@ public class Sistema {
                 encontradoID = i;
             }
         }
-        this.productos.get(encontrado).addProductoCliente(this.productos.get(encontradoID));
+        this.productos.get(encontrado).aumentarStock(this.productos.get(encontradoID));
         
         
 	}

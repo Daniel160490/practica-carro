@@ -3,8 +3,6 @@
  */
 package es.indra.carrocompra.beans;
 
-import java.util.ArrayList;
-
 /**
  * @author daniel
  *
@@ -156,8 +154,7 @@ public class Producto extends Categoria {
 		
 		
 	}
-
-
+	
 	
 	
 }
