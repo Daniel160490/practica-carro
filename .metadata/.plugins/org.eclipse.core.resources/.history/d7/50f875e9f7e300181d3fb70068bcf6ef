@@ -32,7 +32,6 @@ public class Categoria {
 	/**
 	 * @param id
 	 * @param nombre
-	 * @param totalProductos
 	 * @param productos
 	 */
 	public Categoria(int id, String nombre, int totalProductos, Producto[] productos) {
@@ -79,22 +78,6 @@ public class Categoria {
 	}
 	
 	
-	/**
-	 * @return the totalProductos
-	 */
-	public int getTotalProductos() {
-		return totalProductos;
-	}
-
-
-	/**
-	 * @param totalProductos the totalProductos to set
-	 */
-	public void setTotalProductos(int totalProductos) {
-		this.totalProductos = totalProductos;
-	}
-
-
 	/**
 	 * @return the productos
 	 */

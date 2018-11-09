@@ -13,7 +13,6 @@ public class Categoria {
 
 	private int id;
 	private String nombre;
-	private int totalProductos;
 	private Producto [] productos;
 	
 	//Vector dinámico de Productos en las categorias.
@@ -32,14 +31,12 @@ public class Categoria {
 	/**
 	 * @param id
 	 * @param nombre
-	 * @param totalProductos
 	 * @param productos
 	 */
-	public Categoria(int id, String nombre, int totalProductos, Producto[] productos) {
+	public Categoria(int id, String nombre, Producto[] productos) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
-		this.totalProductos = totalProductos;
 		this.productos = productos;
 	}
 
@@ -79,22 +76,6 @@ public class Categoria {
 	}
 	
 	
-	/**
-	 * @return the totalProductos
-	 */
-	public int getTotalProductos() {
-		return totalProductos;
-	}
-
-
-	/**
-	 * @param totalProductos the totalProductos to set
-	 */
-	public void setTotalProductos(int totalProductos) {
-		this.totalProductos = totalProductos;
-	}
-
-
 	/**
 	 * @return the productos
 	 */

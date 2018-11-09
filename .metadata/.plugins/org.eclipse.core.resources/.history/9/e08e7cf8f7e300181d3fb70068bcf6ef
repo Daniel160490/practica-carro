@@ -80,22 +80,6 @@ public class Categoria {
 	
 	
 	/**
-	 * @return the totalProductos
-	 */
-	public int getTotalProductos() {
-		return totalProductos;
-	}
-
-
-	/**
-	 * @param totalProductos the totalProductos to set
-	 */
-	public void setTotalProductos(int totalProductos) {
-		this.totalProductos = totalProductos;
-	}
-
-
-	/**
 	 * @return the productos
 	 */
 	public Producto[] getProductos() {
