@@ -106,7 +106,7 @@ public class Sistema {
 	                
 	                case '3':
 	                {
-	                	//Guardar el historial de compras
+	                	
 	                }
 	                break;
                 }

@@ -90,26 +90,6 @@ public class Sistema {
                 System.out.println("Pulse 'n' para Salir");
                 System.out.println("SELECCIONE UNA OPCION: ");
                 opcion= entrada1.next().charAt(0);
-                switch(opcion){
-                
-	                case '1':
-	                {
-	                	//Mostrar la lista de productos para decir los que se quieren aumentar
-	                }
-	                break;
-	                
-	                case '2':
-	                {
-	                	//Mostrar la lista de productos para decir los que se quieren disminuir
-	                }
-	                break;
-	                
-	                case '3':
-	                {
-	                	//Guardar el historial de compras
-	                }
-	                break;
-                }
                 
             }
             	break;

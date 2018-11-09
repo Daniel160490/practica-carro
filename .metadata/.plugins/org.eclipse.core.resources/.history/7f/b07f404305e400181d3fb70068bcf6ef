@@ -76,41 +76,7 @@ public class Sistema {
             case '1':
             	//EMPRESA
             {
-            
-            	System.out.println("\t\t+--------------------------------------------------+");
-                System.out.println("\t\t|                -- MENU CLIENTE --                |");
-                System.out.println("\t\t+--------------------------------------------------+");
-                System.out.println("\t\t|           CATEGORÍAS DE PRODUCTOS                |");
-                System.out.println("\t\t|                           					   |");
-                System.out.println("\t\t|  1) AUMENTAR STOCK                     		   |");
-                System.out.println("\t\t|  2) DISMINUIR STOCK               			   |");
-                System.out.println("\t\t|  3) GUARDAR HISTORIAL        					   |");
-                System.out.println("\t\t|                           					   |");
-                System.out.println("\t\t+--------------------------------------------------+");
-                System.out.println("Pulse 'n' para Salir");
-                System.out.println("SELECCIONE UNA OPCION: ");
-                opcion= entrada1.next().charAt(0);
-                switch(opcion){
-                
-	                case '1':
-	                {
-	                	//Mostrar la lista de productos para decir los que se quieren aumentar
-	                }
-	                break;
-	                
-	                case '2':
-	                {
-	                	//Mostrar la lista de productos para decir los que se quieren disminuir
-	                }
-	                break;
-	                
-	                case '3':
-	                {
-	                	//Guardar el historial de compras
-	                }
-	                break;
-                }
-                
+            	
             }
             	break;
             case '2':
