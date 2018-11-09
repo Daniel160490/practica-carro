@@ -9,8 +9,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
-import es.indra.carrocompra.means.Categoria;
-import es.indra.carrocompra.means.Producto;
+import es.indra.carrocompra.beans.Categoria;
+import es.indra.carrocompra.beans.Cliente;
+import es.indra.carrocompra.beans.Producto;
 import es.indra.carrocompra.sistema.Sistema;
 
 
@@ -52,13 +53,14 @@ public class Main {
 	public static void main(String[] args) {
 		
 		Categoria categorias = new Categoria();
+		Producto p = new Producto();
 		Sistema sistema = new Sistema();
 		
 		categorias.setNombre("Alimentacion");
 		categorias.setNombre("Perfumeria");
 		categorias.setNombre("Limpieza");
 		
-		Producto p = new Producto();
+		
 		
 		p.setId(10);
 		p.setNombre("Coca-Ccola"); 
@@ -67,7 +69,7 @@ public class Main {
 	
 		Map<String, List<Producto>> productosGenerados = new HashMap<>();
 		
-		productosGenerados.put("08/11/2018", generarProductos());
+		//productosGenerados.put("08/11/2018", generarProductos("","",1,1, p));
 		
 		
 		/*

@@ -8,8 +8,9 @@ import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
-import es.indra.carrocompra.means.Categoria;
-import es.indra.carrocompra.means.Producto;
+import es.indra.carrocompra.beans.Categoria;
+import es.indra.carrocompra.beans.Cliente;
+import es.indra.carrocompra.beans.Producto;
 
 
 
@@ -37,31 +38,7 @@ public class Sistema {
 	}
 	
 	
-	/*
-	 * 
-	 */
-	public static List<Producto> generarProductos(String nombre, double precio, String descripcion, Categoria cat){
-		List<Producto> productos = new ArrayList<>();
-		
-		for (int i = 0; i < 10; i++) {
-			Producto prod = new Producto();
-			prod.setId(i);
-			prod.setNombre(nombre);
-			prod.setDescripcion(descripcion);
-			
-			char c1 = (char)new Random().nextInt(50);
-			char c2 = (char)new Random().nextInt(50);
-			
-			prod.setPrecio(precio);
-			prod.setDescripcion("" + new Random().nextInt(100));
-			prod.setCategoria(cat);
-			//prod.setVuelo(p.getVuelos().get(new Random().nextInt(p.getVuelos().size())));
-			
-			productos.add(prod);
-		}
-		
-		return productos;
-	}
+	
 	
 	/*
 	 * @brief Modulo que muestra una lista de productos de una categoria
@@ -83,6 +60,15 @@ public class Sistema {
         char opcion;
         char continuar;
         
+        
+        // ---  INICIALIZACION DE CLIENTE
+        Cliente cliente = new Cliente();
+        cliente.setNombre("Daniel");
+		cliente.setApellidos("Garcia");
+		cliente.setDireccion("Calle Castellon");
+		cliente.setTelefono(639981209);
+		// ---  INICIALIZACION DE CLIENTE
+        
         System.out.println("\t\t+--------------------------------------------------+");
         System.out.println("\t\t|     -- BIENVENIDOS AL SISTEMA DE COMPRA --       |");
         System.out.println("\t\t+--------------------------------------------------+");
@@ -94,7 +80,7 @@ public class Sistema {
             System.out.println("\t\t+--------------------------------------------------+");
             System.out.println("\t\t|                                                  |");
             System.out.println("\t\t|  1) EMPRESA                   				   |");
-            System.out.println("\t\t|  2) CLIENTE                  					   |");
+            System.out.println("\t\t|  2) CLIENTE                                      |");
             System.out.println("\t\t+--------------------------------------------------+");
             System.out.println("Pulse 'n' para Salir");
             System.out.println("SELECCIONE UNA OPCION: ");
@@ -107,14 +93,13 @@ public class Sistema {
             {
             
             	System.out.println("\t\t+--------------------------------------------------+");
-                System.out.println("\t\t|                -- MENU CLIENTE --                |");
+                System.out.println("\t\t|                -- MENU EMPRESA --                |");
                 System.out.println("\t\t+--------------------------------------------------+");
-                System.out.println("\t\t|           CATEGORÍAS DE PRODUCTOS                |");
                 System.out.println("\t\t|                           					   |");
-                System.out.println("\t\t|  1) AUMENTAR STOCK                     		   |");
+                System.out.println("\t\t|  1) AUMENTAR STOCK                               |");
                 System.out.println("\t\t|  2) DISMINUIR STOCK               			   |");
-                System.out.println("\t\t|  3) GUARDAR HISTORIAL        					   |");
-                System.out.println("\t\t|                           					   |");
+                System.out.println("\t\t|  3) GUARDAR HISTORIAL                            |");
+                System.out.println("\t\t|                                                  |");
                 System.out.println("\t\t+--------------------------------------------------+");
                 System.out.println("Pulse 'n' para Salir");
                 System.out.println("SELECCIONE UNA OPCION: ");
@@ -148,12 +133,19 @@ public class Sistema {
             	System.out.println("\t\t+--------------------------------------------------+");
                 System.out.println("\t\t|                -- MENU CLIENTE --                |");
                 System.out.println("\t\t+--------------------------------------------------+");
+                System.out.println("\t\t|               DATOS DEL CLIENTE                  |");
+                System.out.println("\t\t| NOMBRE: " + cliente.getNombre() + "  			     	   |");
+                System.out.println("\t\t| APELLIDO: "+ cliente.getApellidos() +"      			   |");
+                System.out.println("\t\t| DIRECCION: "+ cliente.getDireccion()+"                       |");
+                System.out.println("\t\t| TELEFONO: "+ cliente.getTelefono()+"                              |");
+                System.out.println("\t\t|                                                  |");
+                System.out.println("\t\t|                                                  |");
                 System.out.println("\t\t|           CATEGORÍAS DE PRODUCTOS                |");
-                System.out.println("\t\t|                           					   |");
-                System.out.println("\t\t|  1) ALIMENTACION                				   |");
-                System.out.println("\t\t|  2) PERFUMERIA               					   |");
-                System.out.println("\t\t|  3) LIMPIEZA               					   |");
-                System.out.println("\t\t|                           					   |");
+                System.out.println("\t\t|                                                  |");
+                System.out.println("\t\t|  1) ALIMENTACION                                 |");
+                System.out.println("\t\t|  2) PERFUMERIA                                   |");
+                System.out.println("\t\t|  3) LIMPIEZA                                     |");
+                System.out.println("\t\t|                                                  |");
                 System.out.println("\t\t+--------------------------------------------------+");
                 System.out.println("Pulse 'n' para Salir");
                 System.out.println("SELECCIONE UNA OPCION: ");
