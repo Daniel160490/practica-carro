@@ -115,7 +115,6 @@ public class Sistema {
                 
 	                case '1':
 	                {
-	                	
 	                	//Mostrar la lista de productos para decir los que se quieren aumentar
 	                	
 	                	/*

@@ -115,9 +115,7 @@ public class Sistema {
                 
 	                case '1':
 	                {
-	                	
 	                	//Mostrar la lista de productos para decir los que se quieren aumentar
-	                	
 	                	/*
 	                	 * Esto aumentaria en 1 el producto seleccionado
 	                	 */
@@ -128,16 +126,7 @@ public class Sistema {
 	                
 	                case '2':
 	                {
-	                	
 	                	//Mostrar la lista de productos para decir los que se quieren disminuir
-	                	
-	                	/*
-	                	 * Esto disminuira en 1 el producto seleccionado
-	                	 */
-	                	Producto prodAux = new Producto(id,nombre,descripcion,0,0,categoria);
-                        disminuirStock(prodAux);
-                        
-                        
 	                }
 	                break;
 	                

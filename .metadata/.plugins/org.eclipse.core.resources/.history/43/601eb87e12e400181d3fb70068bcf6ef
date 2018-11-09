@@ -115,7 +115,6 @@ public class Sistema {
                 
 	                case '1':
 	                {
-	                	
 	                	//Mostrar la lista de productos para decir los que se quieren aumentar
 	                	
 	                	/*
@@ -128,7 +127,6 @@ public class Sistema {
 	                
 	                case '2':
 	                {
-	                	
 	                	//Mostrar la lista de productos para decir los que se quieren disminuir
 	                	
 	                	/*
