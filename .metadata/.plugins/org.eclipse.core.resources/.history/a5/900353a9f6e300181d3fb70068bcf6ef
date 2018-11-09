@@ -7,14 +7,9 @@ import java.util.Scanner;
 
 import es.indra.carrocompra.means.Producto;
 
-
-
 /**
  * @author daniel
- * Clase Sistema que va a contener los metodos principales de la practica
- * Metodo aumentarStock
- * Metodo disminuirStock
- * Metodo menuPrincipal
+ *
  */
 public class Sistema {
 
@@ -32,10 +27,6 @@ public class Sistema {
 		
 	}
 	
-	/*
-	 * Metodo que contiene el menu principal de la practica
-	 * En este menu se realizan llamadas a los diferentes metodos 
-	 */
 	public void menuPrincipal() {
 		
 		Scanner entrada1 = new Scanner(System.in);

@@ -12,9 +12,6 @@ import es.indra.carrocompra.means.Producto;
 /**
  * @author daniel
  * Clase Sistema que va a contener los metodos principales de la practica
- * Metodo aumentarStock
- * Metodo disminuirStock
- * Metodo menuPrincipal
  */
 public class Sistema {
 

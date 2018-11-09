@@ -5,7 +5,6 @@ package es.indra.carrocompra.main;
 
 import es.indra.carrocompra.sistema.Sistema;
 
-
 /**
  * @author daniel
  *
