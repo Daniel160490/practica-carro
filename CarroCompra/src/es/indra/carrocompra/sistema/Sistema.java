@@ -13,6 +13,7 @@ import java.util.Scanner;
 import es.indra.carrocompra.beans.Categoria;
 import es.indra.carrocompra.beans.Cliente;
 import es.indra.carrocompra.beans.Producto;
+import es.indra.carrocompra.services.ReadFile;
 
 
 
@@ -55,16 +56,19 @@ public class Sistema {
 	}
 	/*
 	 * Metodo para comprar un producto seleccionado de una lista
-	 * 
+	 * Metodo modificado joshua
 	 */
+	
+	
 	public void comprarProducto() {
 	
 		
 		int encontradoID = 0;
-        int IDaux;
+		int IDaux;
         int encontrado = 0;
-        int idProdAux;
-        
+        //variable inicializada en 0 por joshua
+        int idProdAux = 0;
+        //-------------------------------------
         
         
 		//Busco el producto por id
@@ -82,6 +86,8 @@ public class Sistema {
 	 * Metodo que contiene el menu principal de la practica
 	 * En este menu se realizan llamadas a los diferentes metodos 
 	 */
+	
+	//---------------------------------------------------------------------------------------------------------
 	public void menuPrincipal() {
 		
 		Scanner entrada1 = new Scanner(System.in);
@@ -92,7 +98,9 @@ public class Sistema {
         String nombre = null, descripcion = null;
         Categoria categoria = null;
         double precio = 0;
-        
+        //** objeto de readfile con los productos 
+        ReadFile rfal = new ReadFile();
+        //--------
         
         // ---  INICIALIZACION DE CLIENTE
         Cliente cliente = new Cliente();
@@ -191,7 +199,7 @@ public class Sistema {
                 System.out.println("\t\t| TELEFONO: "+ cliente.getTelefono()+"                              |");
                 System.out.println("\t\t|                                                  |");
                 System.out.println("\t\t|                                                  |");
-                System.out.println("\t\t|           CATEGORÍAS DE PRODUCTOS                |");
+                System.out.println("\t\t|           CATEGORÃ�AS DE PRODUCTOS                |");
                 System.out.println("\t\t|                                                  |");
                 System.out.println("\t\t|  1) ALIMENTACION                                 |");
                 System.out.println("\t\t|  2) PERFUMERIA                                   |");
@@ -205,20 +213,36 @@ public class Sistema {
                 switch(opcion) {
             	case '1':
             	{
-            		//ALIMENTACION
-            		//Mostrar la lista de productos que pertenecen a ALIMENTACION
+            		System.out.println("------------------------------------------------");
+            		//System.out.println("id Alimentacion, Opcion:" + opcion);
+            		System.out.println("------------------------------------------------");
+            		System.out.println("Productos de alimentacion");
+            		
+            		System.out.println("------------------------------------------------");
             	}
             		break;
             	case '2':
             	{
             		//PERFUMERIA
             		//Mostrar la lista de productos que pertenecen a PERFUMERIA
+            		System.out.println("------------------------------------------------");
+            		//System.out.println("id Alimentacion, Opcion:" + opcion);
+            		System.out.println("------------------------------------------------");
+            		System.out.println("Productos de alimentacion");
+            		
+            		System.out.println("------------------------------------------------");
             	}
             		break;
             	case '3':
             	{
             		//LIMPIEZA
             		//Mostrar la lista de productos que pertenecen a LIMPIEZA
+            		System.out.println("------------------------------------------------");
+            		//System.out.println("id Alimentacion, Opcion:" + opcion);
+            		System.out.println("------------------------------------------------");
+            		System.out.println("Productos de alimentacion");
+            		
+            		System.out.println("------------------------------------------------");
             	}
             		break;
             	}
@@ -226,9 +250,18 @@ public class Sistema {
             	break;
             }
             
-            
-            System.out.println("¿Quiere continuar con el Programa [Y]Si, [N] No?");
+            // codigo implementado joshua
+            List<String> productoss = rfal.generarProductos(opcion);
+
+            for (int i = 0; i < productoss.size(); i++) {
+                System.out.println(productoss.get(i));
+
+			}
+            System.out.println("------------------------------------------------");
+            //-----------
+            System.out.println("Â¿Quiere continuar con el Programa [Y]Si, [N] No?");
             opcion=entrada1.next().charAt(0);
+    		
         	
         }while(opcion != 'n');
         

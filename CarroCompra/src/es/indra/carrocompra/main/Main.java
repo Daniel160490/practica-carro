@@ -42,8 +42,12 @@ public class Main {
 		p.setNombre("Coca-Ccola"); 
 		p.setDescripcion("Producto liquido");
 		
-	
-		Map<String, List<Producto>> productosGenerados = new HashMap<>();
+		
+		
+		
+		
+		//* * cidigo comentado por Joshua ***
+		//Map<String, List<Producto>> productosGenerados = new HashMap<>();
 		
 		//productosGenerados.put("08/11/2018", generarProductos("","",1,1, p));
 		
