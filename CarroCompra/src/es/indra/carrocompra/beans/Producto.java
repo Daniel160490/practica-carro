@@ -17,6 +17,8 @@ public class Producto extends Categoria {
 	private double precio;
 	private int stock;
 	private Categoria categoria;
+	private int totalProductos;
+	ArrayList<Producto> vectorProductos = new ArrayList();
 	
 	
 	/**
@@ -141,6 +143,23 @@ public class Producto extends Categoria {
 		this.categoria = categoria;
 	}
 
+	
+	
+	/**
+	 * @return the totalProductos
+	 */
+	public int getTotalProductos() {
+		return totalProductos;
+	}
+
+
+	/**
+	 * @param totalProductos the totalProductos to set
+	 */
+	public void setTotalProductos(int totalProductos) {
+		this.totalProductos = totalProductos;
+	}
+
 
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
@@ -152,11 +171,7 @@ public class Producto extends Categoria {
 	}
 
 
-	public void addProductoCliente(Producto producto) {
-		
-		
-	}
-
+	
 
 	
 	

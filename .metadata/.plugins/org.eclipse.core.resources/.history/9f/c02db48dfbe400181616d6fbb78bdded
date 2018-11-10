@@ -1,0 +1,65 @@
+package es.indra.carrocompra.services;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class ReadFile {
+	public List<String> generarProductos(char entrada) {
+		
+		List<String> catalimentos = new ArrayList<>();
+		Scanner entrada1 = new Scanner(System.in);
+		char opcion;
+		
+		
+		//int opcionfi = Integer.parseInt(String.valueOf(entrada));
+		
+		//Path path = Paths.get("C:/Users/Joshua/Desktop/Java/Aplicacioncarritocompra/cursojava/categoriaalimento.txt");
+		try {
+			if (entrada == '1') {
+				/*
+				 * MUESTRA EL LISTADO DE PRODUCTOS DE ALIMENTACION
+				 * URL EN WINDOWS: C:/Users/Joshua/Desktop/Java/Aplicacioncarritocompra/CursoJava/Nueva carpeta/categoriaalimentacion.txt
+				 * URL EN MAC: /Users/daniel/eclipse-workspace/categoriaalimentacion.txt
+				 */
+				Path path = Paths.get("/Users/daniel/eclipse-workspace/categoriaalimentacion.txt");
+				catalimentos = Files.readAllLines(path);
+				System.out.println("Por favor, seleccione el producto que quiera comprar: ");
+				opcion= entrada1.next().charAt(0);
+				
+			} else if (entrada == '2') {
+				/*
+				 * MUESTRA EL LISTADO DE PRODUCTOS DE PERFUME
+				 * URL EN WINDOWS: C:/Users/Joshua/Desktop/Java/Aplicacioncarritocompra/CursoJava/categoriaperfume.txt
+				 * URL EN MAC: /Users/daniel/eclipse-workspace/categoriaperfume.txt
+				 */
+				Path path = Paths.get("/Users/daniel/eclipse-workspace/categoriaperfume.txt");
+				catalimentos = Files.readAllLines(path);
+
+			} else if (entrada == '3') {
+				/*
+				 * MUESTRA EL LISTADO DE PRODUCTOS DE LIMPIEZA
+				 * URL EN WINDOWS: C:/Users/Joshua/Desktop/Java/Aplicacioncarritocompra/CursoJava/categorialimpieza.txt
+				 * URL EN MAC: /Users/daniel/eclipse-workspace/categorialimpieza.txt
+				 */
+				Path path = Paths.get("/Users/daniel/eclipse-workspace/categorialimpieza.txt");
+				catalimentos = Files.readAllLines(path);
+				} else {
+					System.out.println("No has introducido una opcion correcta");
+				}
+			
+			
+		} catch (IOException e) {
+			System.out.println("Fallo al leer el carchivo00" + e);
+		} finally {
+			System.out.println("------------------------------------------------");
+		}	
+		
+		return catalimentos;
+	}
+
+}

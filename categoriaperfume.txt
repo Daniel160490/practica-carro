@@ -1,4 +1,4 @@
-Tommy Hilfiger  - Producto de 100 ml.               - 40,75
-Elizabeth Arden - Agua de perfume 75 ml.            - 3,75
-Calvin Klein    - Agua de perfume para mujer 100 ml.- 3,75
-hugo boss       -agua de tocador vaporizdor 100 ml. - 32,20
+1) Tommy Hilfiger  - Producto de 100 ml.               - 40,75
+2) Elizabeth Arden - Agua de perfume 75 ml.            - 3,75
+3) Calvin Klein    - Agua de perfume para mujer 100 ml.- 3,75
+4) hugo boss       -agua de tocador vaporizdor 100 ml. - 32,20

@@ -6,30 +6,45 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class ReadFile {
 	public List<String> generarProductos(char entrada) {
-		//System.out.println("entrada del menu:" + entrada);
-		List<String> catalimentos = new ArrayList<>();
 		
-		//int opcionfi = Integer.parseInt(String.valueOf(entrada));
+		List<String> catalimentos = new ArrayList<>();
+		Scanner entrada1 = new Scanner(System.in);
+		char opcion;
+		
+		
 		
 		//Path path = Paths.get("C:/Users/Joshua/Desktop/Java/Aplicacioncarritocompra/cursojava/categoriaalimento.txt");
 		try {
 			if (entrada == '1') {
-				Path path = Paths.get("C:/Users/Joshua/Desktop/Java/Aplicacioncarritocompra/CursoJava/Nueva carpeta/categoriaalimentacion.txt");
+				/*
+				 * MUESTRA EL LISTADO DE PRODUCTOS DE ALIMENTACION
+				 * URL EN WINDOWS: C:/Users/Joshua/Desktop/Java/Aplicacioncarritocompra/CursoJava/Nueva carpeta/categoriaalimentacion.txt
+				 * URL EN MAC: /Users/daniel/eclipse-workspace/categoriaalimentacion.txt
+				 */
+				Path path = Paths.get("/Users/daniel/eclipse-workspace/categoriaalimentacion.txt");
 				catalimentos = Files.readAllLines(path);
-				System.out.println("Alimentacion");
 				
 			} else if (entrada == '2') {
-				Path path = Paths.get("C:/Users/Joshua/Desktop/Java/Aplicacioncarritocompra/CursoJava/categoriaperfume.txt");
-				catalimentos = Files.readAllLines(path);	
-				System.out.println("perfume:");
+				/*
+				 * MUESTRA EL LISTADO DE PRODUCTOS DE PERFUME
+				 * URL EN WINDOWS: C:/Users/Joshua/Desktop/Java/Aplicacioncarritocompra/CursoJava/categoriaperfume.txt
+				 * URL EN MAC: /Users/daniel/eclipse-workspace/categoriaperfume.txt
+				 */
+				Path path = Paths.get("/Users/daniel/eclipse-workspace/categoriaperfume.txt");
+				catalimentos = Files.readAllLines(path);
 
 			} else if (entrada == '3') {
-				Path path = Paths.get("C:/Users/Joshua/Desktop/Java/Aplicacioncarritocompra/CursoJava/categorialimpieza.txt");
-				catalimentos = Files.readAllLines(path);	
-				System.out.println("limpieza:");
+				/*
+				 * MUESTRA EL LISTADO DE PRODUCTOS DE LIMPIEZA
+				 * URL EN WINDOWS: C:/Users/Joshua/Desktop/Java/Aplicacioncarritocompra/CursoJava/categorialimpieza.txt
+				 * URL EN MAC: /Users/daniel/eclipse-workspace/categorialimpieza.txt
+				 */
+				Path path = Paths.get("/Users/daniel/eclipse-workspace/categorialimpieza.txt");
+				catalimentos = Files.readAllLines(path);
 				} else {
 					System.out.println("No has introducido una opcion correcta");
 				}

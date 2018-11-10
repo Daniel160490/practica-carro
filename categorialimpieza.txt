@@ -1,5 +1,5 @@
-Abrillantadores - Todo tipo de superficies            - 3,75
-Detergente      - Detergente para suelos perfumado 2L - 4,10
-Limpia cristal  - Uso exclusivo para cristal          - 1,55
-Amoniaco        - Amoniaco para suelos                - 3,75
-Quita grasas    - Todo tipo de superficies            - 2,20
+1) Abrillantadores - Todo tipo de superficies            - 3,75
+2) Detergente      - Detergente para suelos perfumado 2L - 4,10
+3) Limpia cristal  - Uso exclusivo para cristal          - 1,55
+4) Amoniaco        - Amoniaco para suelos                - 3,75
+5) Quita grasas    - Todo tipo de superficies            - 2,20

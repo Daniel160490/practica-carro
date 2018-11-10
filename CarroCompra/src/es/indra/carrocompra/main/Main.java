@@ -32,12 +32,6 @@ public class Main {
 		Producto p = new Producto();
 		Sistema sistema = new Sistema();
 		
-		categorias.setNombre("Alimentacion");
-		categorias.setNombre("Perfumeria");
-		categorias.setNombre("Limpieza");
-		
-		
-		
 		p.setId(10);
 		p.setNombre("Coca-Ccola"); 
 		p.setDescripcion("Producto liquido");
