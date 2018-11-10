@@ -293,7 +293,7 @@ public class Sistema {
             		//LIMPIEZA
             		//Mostrar la lista de productos que pertenecen a LIMPIEZA
             		System.out.println("+----------------------------------------------+");
-            		System.out.println("|-> Productos de limpieza                      |");
+            		System.out.println("| Productos de limpieza");
             		System.out.println("|----------------------------------------------|");
             		System.out.println("| PRODUCTO         DESCRIPCION          PRECIO |");
             		

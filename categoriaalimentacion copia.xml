@@ -1,0 +1,11 @@
+<producto>
+	<totalProductos>6</totalProductos>
+	<producto>
+		<id> 0 </id>
+		<nombre> Tomate </tomate>
+		<descripcion> Producto ecologico </descripcion>
+		<precio> 1,75€ </precio>
+		<stock> 100 </stock>
+	</producto>
+</producto>
+
