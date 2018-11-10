@@ -2,6 +2,17 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="java.util.UUID"/>
 <fullyQualifiedTypeName name="es.indra.aerolineas.beans.impl.Billetes"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="es.indra.carrocompra.sistema.Sistema"/>
+<fullyQualifiedTypeName name="es.indra.carrocompra.means.Categoria"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
 <fullyQualifiedTypeName name="java.util.Map"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="es.indra.carrocompra.means.Producto"/>
+<fullyQualifiedTypeName name="es.indra.carrocompra.means.Cliente"/>
+<fullyQualifiedTypeName name="es.indra.carrocompra.beans.Cliente"/>
+<fullyQualifiedTypeName name="java.io.FileWriter"/>
+<fullyQualifiedTypeName name="java.io.PrintWriter"/>
 </qualifiedTypeNameHistroy>
