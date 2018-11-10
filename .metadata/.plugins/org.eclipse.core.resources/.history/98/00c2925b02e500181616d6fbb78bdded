@@ -177,7 +177,7 @@ public class Sistema {
                 System.out.println("\t\t| TELEFONO: "+ cliente.getTelefono()+"                              |");
                 System.out.println("\t\t|                                                  |");
                 System.out.println("\t\t|                                                  |");
-                System.out.println("\t\t|           CATEGORIAS DE PRODUCTOS                |");
+                System.out.println("\t\t|           CATEGORÃ�AS DE PRODUCTOS                |");
                 System.out.println("\t\t|                                                  |");
                 System.out.println("\t\t|  1) ALIMENTACION                                 |");
                 System.out.println("\t\t|  2) PERFUMERIA                                   |");
@@ -192,10 +192,9 @@ public class Sistema {
             	case '1':
             	{
             		
-            		System.out.println("+----------------------------------------------+");
+            		System.out.println("------------------------------------------------");
             		System.out.println("|-> Productos de alimentacion");
-            		System.out.println("-----------------------------------------------|");
-            		System.out.println("| PRODUCTO         DESCRIPCION          PRECIO |");
+            		System.out.println("------------------------------------------------");
             		
             		// codigo implementado joshua
             		
@@ -210,50 +209,42 @@ public class Sistema {
         			switch(opcion) {
 	        			case '1':
 	        			{
-	        				String prodEncontrado = null;
+	        				String encontrado = null;
 	        				for (int i = 0; i < productoss.size(); i++) {
-	        					prodEncontrado = productoss.get(i);
+	        					encontrado = productoss.get(i);
+	                            
 	            			}
-	        				System.out.println("Ha comprado: " + prodEncontrado);
-	        
-	        				Producto prodAux = new Producto(id,nombre,descripcion,0,0,categoria);
-	                        disminuirStock(prodAux);
+	        				System.out.println("Ha comprado " + encontrado);
 	        			}
 	        				break;
 	        			case '2':
 	        			{
-	        				String prodEncontrado = null;
-	        				for (int i = 0; i < productoss.size(); i++) {
-	        					prodEncontrado = productoss.get(i);
-	            			}
-	        				System.out.println("Ha comprado: " + prodEncontrado);
-	        
-	        				Producto prodAux = new Producto(id,nombre,descripcion,0,0,categoria);
-	                        disminuirStock(prodAux);
+	        				int i = 0;
+	        				System.out.println("Ha comprado "+productoss.get(i));
 	        			}
 	        				break;
 	        			case '3':
 	        			{
 	        				int i = 0;
-	        				System.out.println("Ha comprado: "+productoss.get(i));
+	        				System.out.println("Ha comprado "+productoss.get(i));
 	        			}
 	        				break;
 	        			case '4':
 	        			{
 	        				int i = 0;
-	        				System.out.println("Ha comprado: "+productoss.get(i));
+	        				System.out.println("Ha comprado "+productoss.get(i));
 	        			}
 	        				break;
 	        			case '5':
 	        			{
 	        				int i = 0;
-	        				System.out.println("Ha comprado: "+productoss.get(i));
+	        				System.out.println("Ha comprado "+productoss.get(i));
 	        			}
 	        				break;
 	        			case '6':
 	        			{
 	        				int i = 0;
-	        				System.out.println("Ha comprado: "+productoss.get(i));
+	        				System.out.println("Ha comprado "+productoss.get(i));
 	        			}
 	        				break;
         			}
@@ -262,9 +253,9 @@ public class Sistema {
         			
         			
         			
-                    System.out.println("+----------------------------------------------+");
+                    System.out.println("------------------------------------------------");
                     //-----------
-                    System.out.println("¿Quiere continuar con el Programa [Y]Si, [N] No?");
+                    System.out.println("Â¿Quiere continuar con el Programa [Y]Si, [N] No?");
                     opcion=entrada1.next().charAt(0);
             		
             	}
@@ -274,37 +265,18 @@ public class Sistema {
             		//PERFUMERIA
             		//Mostrar la lista de productos que pertenecen a PERFUMERIA
             		//System.out.println("id Alimentacion, Opcion:" + opcion);
-            		System.out.println("+----------------------------------------------+");
-            		System.out.println("| Productos de perfumeria");
-            		System.out.println("-----------------------------------------------|");
-            		System.out.println("| PRODUCTO         DESCRIPCION          PRECIO |");
-            		
-            		List<String> productoss = rfal.generarProductos(opcion);
-                    for (int i = 0; i < productoss.size(); i++) {
-                        System.out.println(productoss.get(i));
-        			}
-                    
-                    System.out.println("Por favor, seleccione el producto que quiera comprar: ");
-        			opcion= entrada1.next().charAt(0);
+            		System.out.println("------------------------------------------------");
+            		System.out.println("Productos de perfumeria");
+            		System.out.println("------------------------------------------------");
             	}
             		break;
             	case '3':
             	{
             		//LIMPIEZA
             		//Mostrar la lista de productos que pertenecen a LIMPIEZA
-            		System.out.println("+----------------------------------------------+");
-            		System.out.println("| Productos de limpieza");
-            		System.out.println("|----------------------------------------------|");
-            		System.out.println("| PRODUCTO         DESCRIPCION          PRECIO |");
-            		
-            		
-            		List<String> productoss = rfal.generarProductos(opcion);
-                    for (int i = 0; i < productoss.size(); i++) {
-                        System.out.println(productoss.get(i));
-        			}
-                    
-                    System.out.println("Por favor, seleccione el producto que quiera comprar: ");
-        			opcion= entrada1.next().charAt(0);
+            		System.out.println("------------------------------------------------");
+            		System.out.println("Productos de limpieza");
+            		System.out.println("------------------------------------------------");
             	}
             		break;
             	}
@@ -317,8 +289,8 @@ public class Sistema {
         	
         }while(opcion != 'n');
         
-        System.out.println("\t\t***********************************************");
-        System.out.println("\t\t*** FIN DEL PROGRAMA, GRACIAS POR SU VISITA ***");
-        System.out.println("\t\t***********************************************");
+        System.out.println("\t\t************************");
+        System.out.println("\t\t*** FIN DEL PROGRAMA ***");
+        System.out.println("\t\t************************");
 	}
 }

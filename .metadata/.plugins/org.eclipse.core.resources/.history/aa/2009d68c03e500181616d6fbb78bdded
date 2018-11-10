@@ -51,9 +51,9 @@ public class ReadFile {
 			
 			
 		} catch (IOException e) {
-			System.out.println("Fallo al leer el archivo" + e);
+			System.out.println("Fallo al leer el carchivo00" + e);
 		} finally {
-			System.out.println("+----------------------------------------------+");
+			System.out.println("------------------------------------------------");
 		}	
 		
 		return catalimentos;

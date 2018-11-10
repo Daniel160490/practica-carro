@@ -215,21 +215,12 @@ public class Sistema {
 	        					prodEncontrado = productoss.get(i);
 	            			}
 	        				System.out.println("Ha comprado: " + prodEncontrado);
-	        
-	        				Producto prodAux = new Producto(id,nombre,descripcion,0,0,categoria);
-	                        disminuirStock(prodAux);
 	        			}
 	        				break;
 	        			case '2':
 	        			{
-	        				String prodEncontrado = null;
-	        				for (int i = 0; i < productoss.size(); i++) {
-	        					prodEncontrado = productoss.get(i);
-	            			}
-	        				System.out.println("Ha comprado: " + prodEncontrado);
-	        
-	        				Producto prodAux = new Producto(id,nombre,descripcion,0,0,categoria);
-	                        disminuirStock(prodAux);
+	        				int i = 0;
+	        				System.out.println("Ha comprado: "+productoss.get(i));
 	        			}
 	        				break;
 	        			case '3':
@@ -274,37 +265,18 @@ public class Sistema {
             		//PERFUMERIA
             		//Mostrar la lista de productos que pertenecen a PERFUMERIA
             		//System.out.println("id Alimentacion, Opcion:" + opcion);
-            		System.out.println("+----------------------------------------------+");
-            		System.out.println("| Productos de perfumeria");
-            		System.out.println("-----------------------------------------------|");
-            		System.out.println("| PRODUCTO         DESCRIPCION          PRECIO |");
-            		
-            		List<String> productoss = rfal.generarProductos(opcion);
-                    for (int i = 0; i < productoss.size(); i++) {
-                        System.out.println(productoss.get(i));
-        			}
-                    
-                    System.out.println("Por favor, seleccione el producto que quiera comprar: ");
-        			opcion= entrada1.next().charAt(0);
+            		System.out.println("------------------------------------------------");
+            		System.out.println("Productos de perfumeria");
+            		System.out.println("------------------------------------------------");
             	}
             		break;
             	case '3':
             	{
             		//LIMPIEZA
             		//Mostrar la lista de productos que pertenecen a LIMPIEZA
-            		System.out.println("+----------------------------------------------+");
-            		System.out.println("| Productos de limpieza");
-            		System.out.println("|----------------------------------------------|");
-            		System.out.println("| PRODUCTO         DESCRIPCION          PRECIO |");
-            		
-            		
-            		List<String> productoss = rfal.generarProductos(opcion);
-                    for (int i = 0; i < productoss.size(); i++) {
-                        System.out.println(productoss.get(i));
-        			}
-                    
-                    System.out.println("Por favor, seleccione el producto que quiera comprar: ");
-        			opcion= entrada1.next().charAt(0);
+            		System.out.println("------------------------------------------------");
+            		System.out.println("Productos de limpieza");
+            		System.out.println("------------------------------------------------");
             	}
             		break;
             	}
