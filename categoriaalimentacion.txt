@@ -1,0 +1,8 @@
+tomate    - Producto ecologico    - 1,75
+cebolla   - Producto ecologico    - 2,70
+zanaoria  - Producto ecologico    - 1,25
+brocoli   - Producto ecologico    - 2,55
+ajo 	  - Producto ecologico    - 3,70
+patata    - Producto ecologico    - 0,95
+
+
