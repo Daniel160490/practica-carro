@@ -165,16 +165,6 @@ public class Sistema {
 	                	
 	                	//Mostrar la lista de productos para decir los que se quieren aumentar
 	                	
-	                	/*
-	            		 * Muestra la lista de productos de alimentacion
-	            		 */
-	            		for(Producto p : listaProductosAl) {
-	            			System.out.println(p.toString());
-	            		}
-	            		
-	                    System.out.println("Por favor, seleccione el producto que quiera aumentar su stock: ");
-	                    System.out.println("Ha comprado: " + listaProductosAl[opcion2=entrada1.nextInt()].getNombre());
-	                	
 	                	
 	                }
 	                break;
