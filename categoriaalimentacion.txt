@@ -1,8 +1,6 @@
-1) Tomate      - Producto ecologico   -  1,75€
-2) Cebolla     - Producto ecologico   -  2,70€
-3) Zanahoria   - Producto ecologico   -  1,25€
-4) Broccoli    - Producto ecologico   -  2,55€
-5) Ajo 	       - Producto ecologico   -  3,70€
-6) Patata      - Producto ecologico   -  0,95€
-
-
+1) Tomate      - Producto ecologico  -  1,75€
+2) Cebolla     - Producto ecologico  -  2,70€
+3) Zanahoria   - Producto ecologico  -  1,25€
+4) Broccoli    - Producto ecologico  -  2,55€
+5) Ajo 	       - Producto ecologico  -  3,70€
+6) Patata      - Producto ecologico  -  0,95€

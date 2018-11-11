@@ -17,8 +17,6 @@ public class Categoria {
 	private int totalProductos;
 	private Producto [] productos;
 	
-	//Vector dinámico de Productos en las categorias.
-    ArrayList<Producto> arrayProducto = new ArrayList();
 	
 	/*------------------------------------------------------------------+
 	 * 							CONSTUCTORES 							*
@@ -118,7 +116,7 @@ public class Categoria {
 	@Override
 	public String toString() {
 		return "Categoria [id=" + id + ", nombre=" + nombre + ", totalProductos=" + totalProductos + ", productos="
-				+ Arrays.toString(productos) + ", arrayProducto=" + arrayProducto + "]";
+				+ Arrays.toString(productos) + "]";
 	}
 	
 	

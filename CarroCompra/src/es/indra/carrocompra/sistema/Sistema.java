@@ -59,6 +59,8 @@ public class Sistema {
 		this.setTotalProductos(this.getTotalProductos()+1);
 	}
 	
+	
+	
 	/*
 	 * Metodo que contiene el menu principal de la practica
 	 * En este menu se realizan llamadas a los diferentes metodos 
@@ -68,18 +70,47 @@ public class Sistema {
 	public void menuPrincipal() {
 		
 		Scanner entrada1 = new Scanner(System.in);
-        Producto productos = new Producto();
         char opcion;
         char continuar;
-        int id = 0, stock = 0;
-        String nombre = null, descripcion = null;
-        Categoria categoria = null;
         
         
-        //** objeto de readfile con los productos 
-        ReadFile rfal = new ReadFile();
-        //--------
+        /*
+         * 
+         * INICIALIZACION DE CATEGORIAS Y PRODUCTOS
+         * 
+         */
+        Producto listaProductosAl[] = new Producto[5];
+        Producto listaProductosPer[] = new Producto[3];
+        Producto listaProductosLim[] = new Producto[3];
+        Categoria listaCategorias [] = new Categoria[3];
         
+		
+		listaCategorias[0] = new Categoria();
+		/*
+		 * Productos de alimentacion
+		 */
+		listaProductosAl[0] = new Producto(1,"Tomate","Producto ecologico",1.75,100, listaCategorias[0]);
+		listaProductosAl[1] = new Producto(2,"Cebolla","Producto ecologico",2.70,100, listaCategorias[0]);
+		listaProductosAl[2] = new Producto(3,"Zanahora","Producto ecologico",2.70,100, listaCategorias[0]);
+		listaProductosAl[3] = new Producto(4,"Cebolla","Producto ecologico",1.25,100, listaCategorias[0]);
+		listaProductosAl[4] = new Producto(5, "Ajo", "Producto ecologico", 3.70, 100, listaCategorias[0]);
+		
+		/*
+		 * Productos de perfumeria
+		 */
+		listaProductosPer[0] = new Producto(5, "Tommy Hilfiger", "Producto de 100 ml.", 40.75, 100, listaCategorias[0]);
+		listaProductosPer[1] = new Producto(5, "Elizabeth Arden", "Agua de perfume 75 ml.", 3.75, 100, listaCategorias[0]);
+		listaProductosPer[2] = new Producto(5, "Elizabeth Arden", "Agua de perfume 75 ml.", 3.75, 100, listaCategorias[0]);
+		
+		/*
+		 * Productos de limpieza
+		 */
+		listaProductosLim[0] = new Producto(5, "Abrillantadores", "Todo tipo de superficies", 3.75, 100, listaCategorias[2]);
+		listaProductosLim[1] = new Producto(5, "Detergente", "Detergente para suelos perfumado 2L", 4.75, 100, listaCategorias[2]);
+		listaProductosLim[2] = new Producto(5, "Quita grasas", "Todo tipo de superficies ", 2.20, 100, listaCategorias[0]);
+	
+		
+      
         // ---  INICIALIZACION DE CLIENTE
         Cliente cliente = new Cliente();
         cliente.setNombre("Daniel");
@@ -132,11 +163,7 @@ public class Sistema {
 	                	
 	                	//Mostrar la lista de productos para decir los que se quieren aumentar
 	                	
-	                	/*
-	                	 * Esto aumentaria en 1 el producto seleccionado
-	                	 */
-	                	Producto prodAux = new Producto(id,nombre,descripcion,0,0,categoria);
-                        aumentarStock(prodAux);
+	                	
 	                }
 	                break;
 	                
@@ -144,13 +171,7 @@ public class Sistema {
 	                {
 	                	
 	                	//Mostrar la lista de productos para decir los que se quieren disminuir
-	                	
-	                	/*
-	                	 * Esto disminuira en 1 el producto seleccionado
-	                	 */
-	                	Producto prodAux = new Producto(id,nombre,descripcion,0,0,categoria);
-                        disminuirStock(prodAux);
-                        
+	       
                         
 	                }
 	                break;
@@ -160,10 +181,12 @@ public class Sistema {
 	                	//Guardar el historial de compras
 	                }
 	                break;
+	                
                 }
                 
             }
             	break;
+            	
             case '2':
             	//CLIENTE
             {
@@ -189,73 +212,72 @@ public class Sistema {
                 opcion= entrada1.next().charAt(0);
             	
                 switch(opcion) {
+                
             	case '1':
             	{
             		
             		System.out.println("+----------------------------------------------+");
             		System.out.println("|-> Productos de alimentacion                  |");
-            		System.out.println("-----------------------------------------------|");
+            		System.out.println("|----------------------------------------------|");
             		System.out.println("| PRODUCTO         DESCRIPCION          PRECIO |");
+            		System.out.println("+----------------------------------------------+");
             		
-            		// codigo implementado joshua
+            		/*
+            		 * Muestra la lista de productos de alimentacion
+            		 */
+            		for(Producto p : listaProductosAl) {
+            			System.out.println(p.toString());
+            		}
             		
-                    List<String> productoss = rfal.generarProductos(opcion);
-                    for (int i = 0; i < productoss.size(); i++) {
-                        System.out.println(productoss.get(i));
-        			}
-                    
                     System.out.println("Por favor, seleccione el producto que quiera comprar: ");
         			opcion= entrada1.next().charAt(0);
         			
         			switch(opcion) {
+        			
 	        			case '1':
 	        			{
-	        				String prodEncontrado = null;
-	        				for (int i = 0; i < productoss.size(); i++) {
-	        					prodEncontrado = productoss.get(i);
-	            			}
-	        				System.out.println("Ha comprado: " + prodEncontrado);
-	        
-	        				Producto prodAux = new Producto(id,nombre,descripcion,0,0,categoria);
-	                        disminuirStock(prodAux);
+	        				String comprado = null;
+	        				
+	        				for(Producto p : listaProductosAl) {
+	                			comprado = p.getNombre();
+	                		}
+	        				
+	        				System.out.println("Ha comprado: " + comprado);
+	                        
 	        			}
 	        				break;
+	        				
 	        			case '2':
 	        			{
-	        				String prodEncontrado = null;
-	        				for (int i = 0; i < productoss.size(); i++) {
-	        					prodEncontrado = productoss.get(i);
-	            			}
-	        				System.out.println("Ha comprado: " + prodEncontrado);
-	        
-	        				Producto prodAux = new Producto(id,nombre,descripcion,0,0,categoria);
-	                        disminuirStock(prodAux);
+	        				
+	                        
 	        			}
 	        				break;
+	        				
 	        			case '3':
 	        			{
-	        				int i = 0;
-	        				System.out.println("Ha comprado: "+productoss.get(i));
+	        				
 	        			}
 	        				break;
+	        				
 	        			case '4':
 	        			{
-	        				int i = 0;
-	        				System.out.println("Ha comprado: "+productoss.get(i));
+	        				
 	        			}
 	        				break;
+	        				
 	        			case '5':
 	        			{
-	        				int i = 0;
-	        				System.out.println("Ha comprado: "+productoss.get(i));
+	        				
 	        			}
 	        				break;
+	        				
 	        			case '6':
 	        			{
-	        				int i = 0;
-	        				System.out.println("Ha comprado: "+productoss.get(i));
+	        				
 	        			}
 	        				break;
+	        				
         			}
         			
         			
@@ -278,11 +300,15 @@ public class Sistema {
             		System.out.println("|-> Productos de perfumeria                    |");
             		System.out.println("-----------------------------------------------|");
             		System.out.println("| PRODUCTO         DESCRIPCION          PRECIO |");
+            		System.out.println("+----------------------------------------------+");
             		
-            		List<String> productoss = rfal.generarProductos(opcion);
-                    for (int i = 0; i < productoss.size(); i++) {
-                        System.out.println(productoss.get(i));
-        			}
+            		/*
+            		 * Muestra la lista de productos de alimentacion
+            		 */
+            		for(Producto p : listaProductosPer) {
+            			System.out.println(p.toString());
+            		}
+            		
                     
                     System.out.println("Por favor, seleccione el producto que quiera comprar: ");
         			opcion= entrada1.next().charAt(0);
@@ -296,12 +322,14 @@ public class Sistema {
             		System.out.println("|-> Productos de limpieza                      |");
             		System.out.println("|----------------------------------------------|");
             		System.out.println("| PRODUCTO         DESCRIPCION          PRECIO |");
+            		System.out.println("+----------------------------------------------+");
             		
-            		
-            		List<String> productoss = rfal.generarProductos(opcion);
-                    for (int i = 0; i < productoss.size(); i++) {
-                        System.out.println(productoss.get(i));
-        			}
+            		/*
+            		 * Muestra la lista de productos de alimentacion
+            		 */
+            		for(Producto p : listaProductosLim) {
+            			System.out.println(p.toString());
+            		}
                     
                     System.out.println("Por favor, seleccione el producto que quiera comprar: ");
         			opcion= entrada1.next().charAt(0);

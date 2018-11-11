@@ -17,8 +17,6 @@ public class Producto extends Categoria {
 	private double precio;
 	private int stock;
 	private Categoria categoria;
-	private int totalProductos;
-	ArrayList<Producto> vectorProductos = new ArrayList();
 	
 	
 	/**
@@ -143,33 +141,18 @@ public class Producto extends Categoria {
 		this.categoria = categoria;
 	}
 
-	
-	
-	/**
-	 * @return the totalProductos
-	 */
-	public int getTotalProductos() {
-		return totalProductos;
-	}
-
-
-	/**
-	 * @param totalProductos the totalProductos to set
-	 */
-	public void setTotalProductos(int totalProductos) {
-		this.totalProductos = totalProductos;
-	}
-
 
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
 	public String toString() {
-		return "Producto [id=" + id + ", nombre=" + nombre + ", descripcion=" + descripcion + ", precio=" + precio
-				+ ", stock=" + stock + ", categoria=" + categoria + "]";
+		return " "+ nombre + "      " + descripcion + "     "+ precio
+				+ "       stock=" + stock + "";
 	}
 
+
+	
 
 	
 
