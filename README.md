@@ -1,5 +1,5 @@
 # PRACTICA CARRITO COMPRA
-#### Daniel Garcia Diaz
+##### Daniel Garcia Diaz
 
 ## DESCRIPCION:
 Se trata de una pequeña práctica en la que desarrollar lo aprendido en el curso sobre Java.
