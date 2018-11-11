@@ -246,7 +246,7 @@ public class Sistema {
             		
                     System.out.println("Por favor, seleccione el producto que quiera comprar: ");
                     System.out.println("Ha comprado: " + listaProductosAl[opcion2=entrada1.nextInt()].getNombre());
-                  
+        			
     				
                     System.out.println("+----------------------------------------------+");
                     //-----------

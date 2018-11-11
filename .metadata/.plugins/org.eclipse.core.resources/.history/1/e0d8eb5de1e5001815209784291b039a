@@ -42,6 +42,53 @@ public class Sistema {
     char continuar;
     String comprado = null;
     
+    
+    /*
+     * 
+     * INICIALIZACION DE CATEGORIAS Y PRODUCTOS
+     * 
+     */
+    Producto listaProductosAl[] = new Producto[5];
+    Producto listaProductosPer[] = new Producto[3];
+    Producto listaProductosLim[] = new Producto[3];
+    Categoria listaCategorias [] = new Categoria[3];
+    
+	
+	listaCategorias[0] = new Categoria();
+	/*
+	 * Productos de alimentacion
+	 */
+	listaProductosAl[0] = new Producto(1,"Tomate","Producto ecologico",1.75,100, listaCategorias[0]);
+	listaProductosAl[1] = new Producto(2,"Cebolla","Producto ecologico",2.70,100, listaCategorias[0]);
+	listaProductosAl[2] = new Producto(3,"Zanahora","Producto ecologico",2.70,100, listaCategorias[0]);
+	listaProductosAl[3] = new Producto(4,"Cebolla","Producto ecologico",1.25,100, listaCategorias[0]);
+	listaProductosAl[4] = new Producto(5, "Ajo", "Producto ecologico", 3.70, 100, listaCategorias[0]);
+	
+	/*
+	 * Productos de perfumeria
+	 */
+	listaProductosPer[0] = new Producto(5, "Tommy Hilfiger", "Producto de 100 ml.", 40.75, 100, listaCategorias[0]);
+	listaProductosPer[1] = new Producto(5, "Elizabeth Arden", "Agua de perfume 75 ml.", 3.75, 100, listaCategorias[0]);
+	listaProductosPer[2] = new Producto(5, "Elizabeth Arden", "Agua de perfume 75 ml.", 3.75, 100, listaCategorias[0]);
+	
+	/*
+	 * Productos de limpieza
+	 */
+	listaProductosLim[0] = new Producto(5, "Abrillantadores", "Todo tipo de superficies", 3.75, 100, listaCategorias[2]);
+	listaProductosLim[1] = new Producto(5, "Detergente", "Detergente para suelos perfumado 2L", 4.75, 100, listaCategorias[2]);
+	listaProductosLim[2] = new Producto(5, "Quita grasas", "Todo tipo de superficies ", 2.20, 100, listaCategorias[0]);
+
+	
+  
+    // ---  INICIALIZACION DE CLIENTE
+    Cliente cliente = new Cliente();
+    cliente.setNombre("Daniel");
+	cliente.setApellidos("Garcia");
+	cliente.setDireccion("Calle Castellon");
+	cliente.setTelefono(639981209);
+	// ---  INICIALIZACION DE CLIENTE
+    
+	
 	
 	
 	/*
@@ -77,53 +124,6 @@ public class Sistema {
 	//---------------------------------------------------------------------------------------------------------
 	public void menuPrincipal() {
 		
-		
-        
-        /*
-         * 
-         * INICIALIZACION DE CATEGORIAS Y PRODUCTOS
-         * 
-         */
-        Producto listaProductosAl[] = new Producto[5];
-        Producto listaProductosPer[] = new Producto[3];
-        Producto listaProductosLim[] = new Producto[3];
-        Categoria listaCategorias [] = new Categoria[3];
-        
-		
-		listaCategorias[0] = new Categoria();
-		/*
-		 * Productos de alimentacion
-		 */
-		listaProductosAl[0] = new Producto(1,"Tomate","Producto ecologico",1.75,100, listaCategorias[0]);
-		listaProductosAl[1] = new Producto(2,"Cebolla","Producto ecologico",2.70,100, listaCategorias[0]);
-		listaProductosAl[2] = new Producto(3,"Zanahora","Producto ecologico",2.70,100, listaCategorias[0]);
-		listaProductosAl[3] = new Producto(4,"Cebolla","Producto ecologico",1.25,100, listaCategorias[0]);
-		listaProductosAl[4] = new Producto(5, "Ajo", "Producto ecologico", 3.70, 100, listaCategorias[0]);
-		
-		/*
-		 * Productos de perfumeria
-		 */
-		listaProductosPer[0] = new Producto(5, "Tommy Hilfiger", "Producto de 100 ml.", 40.75, 100, listaCategorias[0]);
-		listaProductosPer[1] = new Producto(5, "Elizabeth Arden", "Agua de perfume 75 ml.", 3.75, 100, listaCategorias[0]);
-		listaProductosPer[2] = new Producto(5, "Elizabeth Arden", "Agua de perfume 75 ml.", 3.75, 100, listaCategorias[0]);
-		
-		/*
-		 * Productos de limpieza
-		 */
-		listaProductosLim[0] = new Producto(5, "Abrillantadores", "Todo tipo de superficies", 3.75, 100, listaCategorias[2]);
-		listaProductosLim[1] = new Producto(5, "Detergente", "Detergente para suelos perfumado 2L", 4.75, 100, listaCategorias[2]);
-		listaProductosLim[2] = new Producto(5, "Quita grasas", "Todo tipo de superficies ", 2.20, 100, listaCategorias[0]);
-	
-		
-      
-        // ---  INICIALIZACION DE CLIENTE
-        Cliente cliente = new Cliente();
-        cliente.setNombre("Daniel");
-		cliente.setApellidos("Garcia");
-		cliente.setDireccion("Calle Castellon");
-		cliente.setTelefono(639981209);
-		// ---  INICIALIZACION DE CLIENTE
-        
 		
 		
         System.out.println("\t\t+--------------------------------------------------+");
@@ -177,7 +177,7 @@ public class Sistema {
 	            		
 	                    System.out.println("Por favor, seleccione el producto que quiera aumentar su stock: ");
 	                    System.out.println("Ha comprado: " + listaProductosAl[opcion2=entrada1.nextInt()].getNombre());
-	                    
+	                	
 	                	
 	                }
 	                break;
@@ -246,7 +246,7 @@ public class Sistema {
             		
                     System.out.println("Por favor, seleccione el producto que quiera comprar: ");
                     System.out.println("Ha comprado: " + listaProductosAl[opcion2=entrada1.nextInt()].getNombre());
-                  
+        			
     				
                     System.out.println("+----------------------------------------------+");
                     //-----------

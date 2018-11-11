@@ -177,7 +177,8 @@ public class Sistema {
 	            		
 	                    System.out.println("Por favor, seleccione el producto que quiera aumentar su stock: ");
 	                    System.out.println("Ha comprado: " + listaProductosAl[opcion2=entrada1.nextInt()].getNombre());
-	                    
+	                    Cliente c = new Cliente();
+	                    System.out.println(c.getProducto().toString());
 	                	
 	                }
 	                break;
@@ -246,7 +247,7 @@ public class Sistema {
             		
                     System.out.println("Por favor, seleccione el producto que quiera comprar: ");
                     System.out.println("Ha comprado: " + listaProductosAl[opcion2=entrada1.nextInt()].getNombre());
-                  
+        			
     				
                     System.out.println("+----------------------------------------------+");
                     //-----------

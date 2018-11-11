@@ -36,14 +36,6 @@ public class Sistema {
 	public int getTotalProductos(){return totalProductos;}
 	
 	
-	Scanner entrada1 = new Scanner(System.in);
-    char opcion;
-    int opcion2;
-    char continuar;
-    String comprado = null;
-    
-	
-	
 	/*
 	 * Metodo que va a aumentar el stock de los productos
 	 */
@@ -77,7 +69,12 @@ public class Sistema {
 	//---------------------------------------------------------------------------------------------------------
 	public void menuPrincipal() {
 		
-		
+		Scanner entrada1 = new Scanner(System.in);
+        char opcion;
+        int opcion2;
+        char continuar;
+        String comprado = null;
+        
         
         /*
          * 
@@ -177,7 +174,7 @@ public class Sistema {
 	            		
 	                    System.out.println("Por favor, seleccione el producto que quiera aumentar su stock: ");
 	                    System.out.println("Ha comprado: " + listaProductosAl[opcion2=entrada1.nextInt()].getNombre());
-	                    
+	                	
 	                	
 	                }
 	                break;
@@ -246,7 +243,7 @@ public class Sistema {
             		
                     System.out.println("Por favor, seleccione el producto que quiera comprar: ");
                     System.out.println("Ha comprado: " + listaProductosAl[opcion2=entrada1.nextInt()].getNombre());
-                  
+        			
     				
                     System.out.println("+----------------------------------------------+");
                     //-----------
