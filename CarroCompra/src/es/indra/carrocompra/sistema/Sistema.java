@@ -32,8 +32,9 @@ public class Sistema {
 	
 	
 	Scanner entrada1 = new Scanner(System.in);
-    char opcion;
-    int opcion2;
+    char opcionMenu;
+    int opcionListaPro;
+    int stock;
     char continuar;
     String comprado = null;
     
@@ -134,9 +135,9 @@ public class Sistema {
             System.out.println("Pulse 'n' para Salir");
             System.out.println("SELECCIONE UNA OPCION: ");
 
-            opcion= entrada1.next().charAt(0);
+            opcionMenu= entrada1.next().charAt(0);
             
-            switch(opcion) {
+            switch(opcionMenu) {
             case '1':
             	//EMPRESA
             {
@@ -152,8 +153,8 @@ public class Sistema {
                 System.out.println("\t\t+--------------------------------------------------+");
                 System.out.println("Pulse 'n' para Salir");
                 System.out.println("SELECCIONE UNA OPCION: ");
-                opcion= entrada1.next().charAt(0);
-                switch(opcion){
+                opcionMenu= entrada1.next().charAt(0);
+                switch(opcionMenu){
                 
 	                case '1':
 	                {
@@ -168,9 +169,41 @@ public class Sistema {
 	            		}
 	            		
 	                    System.out.println("Por favor, seleccione el producto que quiera aumentar su stock: ");
-	                    System.out.println("Ha comprado: " + listaProductosAl[opcion2=entrada1.nextInt()].getNombre());
+	                    opcionListaPro = entrada1.nextInt();
+	                    System.out.println("Ha pulsado: " + listaProductosAl[opcionListaPro].getNombre());
+	                    System.out.println("El stock es: " + listaProductosAl[opcionListaPro].getStock());	                    
+	                    
+	                    System.out.println("Cuanto Stock desea tener en el producto");
+	                    stock= entrada1.nextInt();	                  
+	                    
+	                    listaProductosAl[opcionListaPro].setStock(stock);
+	                    
+	                    System.out.println("Stock actual: " + listaProductosAl[opcionListaPro].getStock());
+	                    //listaProductosAl[opcion2].setStock(listaProductosAl[opcion2].getStock()-1);
 	                    
 	                	
+	                    
+	                    
+//	                    
+//	                    for(Producto p : listaProductosAl) {
+//	            			System.out.println(p.toString());
+//	            		}
+//	            		
+//	                    System.out.println("Por favor, seleccione el producto que quiera comprar: ");
+//	                    System.out.println("Ha comprado: " + listaProductosAl[opcion2=entrada1.nextInt()].getNombre());
+//	                    /*
+//	                     * Esto disminuye el stock de los productos
+//	                     */
+//	                    listaProductosAl[opcion2].setStock(listaProductosAl[opcion2].getStock()-1);
+//	                    System.out.println("El stock ahora es: " + listaProductosAl[opcion2].getStock());
+//	                  
+//	    				
+//	                    System.out.println("+----------------------------------------------+");
+//	                    //-----------
+//	                    System.out.println("¿Quiere continuar con el Programa [Y]Si, [N] No?");
+//	                    opcion=entrada1.next().charAt(0);
+	                    
+	                    
 	                }
 	                break;
 	                
@@ -216,9 +249,9 @@ public class Sistema {
                 System.out.println("\t\t+--------------------------------------------------+");
                 System.out.println("Pulse 'n' para Salir");
                 System.out.println("SELECCIONE UNA OPCION: ");
-                opcion= entrada1.next().charAt(0);
+                opcionMenu= entrada1.next().charAt(0);
             	
-                switch(opcion) {
+                switch(opcionMenu) {
                 
             	case '1':
             	{
@@ -237,18 +270,18 @@ public class Sistema {
             		}
             		
                     System.out.println("Por favor, seleccione el producto que quiera comprar: ");
-                    System.out.println("Ha comprado: " + listaProductosAl[opcion2=entrada1.nextInt()].getNombre());
+                    System.out.println("Ha comprado: " + listaProductosAl[opcionListaPro=entrada1.nextInt()].getNombre());
                     /*
                      * Esto disminuye el stock de los productos
                      */
-                    listaProductosAl[opcion2].setStock(listaProductosAl[opcion2].getStock()-1);
-                    System.out.println("El stock ahora es: " + listaProductosAl[opcion2].getStock());
+                    listaProductosAl[opcionListaPro].setStock(listaProductosAl[opcionListaPro].getStock()-1);
+                    System.out.println("El stock ahora es: " + listaProductosAl[opcionListaPro].getStock());
                   
     				
                     System.out.println("+----------------------------------------------+");
                     //-----------
                     System.out.println("¿Quiere continuar con el Programa [Y]Si, [N] No?");
-                    opcion=entrada1.next().charAt(0);
+                    opcionMenu=entrada1.next().charAt(0);
             		
             	}
             		break;
@@ -273,10 +306,10 @@ public class Sistema {
             		
                     
                     System.out.println("Por favor, seleccione el producto que quiera comprar: ");
-                    System.out.println("Ha comprado: " + listaProductosPer[opcion2=entrada1.nextInt()].getNombre());
+                    System.out.println("Ha comprado: " + listaProductosPer[opcionListaPro=entrada1.nextInt()].getNombre());
                     
-                    listaProductosPer[opcion2].setStock(listaProductosPer[opcion2].getStock()-1);
-                    System.out.println("El stock ahora es: " + listaProductosPer[opcion2].getStock());
+                    listaProductosPer[opcionListaPro].setStock(listaProductosPer[opcionListaPro].getStock()-1);
+                    System.out.println("El stock ahora es: " + listaProductosPer[opcionListaPro].getStock());
     				
     				
             	}
@@ -300,10 +333,10 @@ public class Sistema {
             		}
                     
                     System.out.println("Por favor, seleccione el producto que quiera comprar: ");
-                    System.out.println("Ha comprado: " + listaProductosLim[opcion2=entrada1.nextInt()].getNombre());
+                    System.out.println("Ha comprado: " + listaProductosLim[opcionListaPro=entrada1.nextInt()].getNombre());
                     
-                    listaProductosLim[opcion2].setStock(listaProductosLim[opcion2].getStock()-1);
-                    System.out.println("El stock ahora es: " + listaProductosLim[opcion2].getStock());
+                    listaProductosLim[opcionListaPro].setStock(listaProductosLim[opcionListaPro].getStock()-1);
+                    System.out.println("El stock ahora es: " + listaProductosLim[opcionListaPro].getStock());
             	}
             		break;
             	}
@@ -314,7 +347,7 @@ public class Sistema {
            
     		
         	
-        }while(opcion != 'n');
+        }while(opcionMenu != 'n');
         
         System.out.println("\t\t***********************************************");
         System.out.println("\t\t*** FIN DEL PROGRAMA, GRACIAS POR SU VISITA ***");
