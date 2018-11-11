@@ -275,7 +275,7 @@ public class Sistema {
                     System.out.println("Por favor, seleccione el producto que quiera comprar: ");
                     System.out.println("Ha comprado: " + listaProductosPer[opcion2=entrada1.nextInt()].getNombre());
                     
-                    listaProductosPer[opcion2].setStock(listaProductosPer[opcion2].getStock()-1);
+                    listaProductosAl[opcion2].setStock(listaProductosPer[opcion2].getStock()-1);
                     System.out.println("El stock ahora es: " + listaProductosPer[opcion2].getStock());
     				
     				

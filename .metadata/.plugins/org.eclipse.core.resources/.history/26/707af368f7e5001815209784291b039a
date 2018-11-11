@@ -238,11 +238,8 @@ public class Sistema {
             		
                     System.out.println("Por favor, seleccione el producto que quiera comprar: ");
                     System.out.println("Ha comprado: " + listaProductosAl[opcion2=entrada1.nextInt()].getNombre());
-                    /*
-                     * Esto disminuye el stock de los productos
-                     */
                     listaProductosAl[opcion2].setStock(listaProductosAl[opcion2].getStock()-1);
-                    System.out.println("El stock ahora es: " + listaProductosAl[opcion2].getStock());
+                    System.out.println("El stock ahora es: " listaProductosAl[opcion2].getStock());
                   
     				
                     System.out.println("+----------------------------------------------+");
@@ -273,10 +270,7 @@ public class Sistema {
             		
                     
                     System.out.println("Por favor, seleccione el producto que quiera comprar: ");
-                    System.out.println("Ha comprado: " + listaProductosPer[opcion2=entrada1.nextInt()].getNombre());
-                    
-                    listaProductosPer[opcion2].setStock(listaProductosPer[opcion2].getStock()-1);
-                    System.out.println("El stock ahora es: " + listaProductosPer[opcion2].getStock());
+                    System.out.println("Ha comprado: " + listaProductosAl[opcion2=entrada1.nextInt()].getNombre());
     				
     				
             	}
@@ -300,10 +294,7 @@ public class Sistema {
             		}
                     
                     System.out.println("Por favor, seleccione el producto que quiera comprar: ");
-                    System.out.println("Ha comprado: " + listaProductosLim[opcion2=entrada1.nextInt()].getNombre());
-                    
-                    listaProductosLim[opcion2].setStock(listaProductosLim[opcion2].getStock()-1);
-                    System.out.println("El stock ahora es: " + listaProductosLim[opcion2].getStock());
+                    System.out.println("Ha comprado: " + listaProductosAl[opcion2=entrada1.nextInt()].getNombre());
             	}
             		break;
             	}

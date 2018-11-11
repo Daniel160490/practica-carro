@@ -113,7 +113,7 @@ public class Producto extends Categoria {
 	/**
 	 * @return the stock
 	 */
-	public int getStock() {
+	public int isStock() {
 		return stock;
 	}
 	
