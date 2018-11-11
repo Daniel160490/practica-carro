@@ -286,7 +286,13 @@ public class Sistema {
             		}
                     
                     System.out.println("Por favor, seleccione el producto que quiera comprar: ");
-                    System.out.println("Ha comprado: " + listaProductosAl[opcion2=entrada1.nextInt()].getNombre());
+        			opcion= entrada1.next().charAt(0);
+        			
+        			for(Producto p : listaProductosLim) {
+            			comprado = p.getNombre();
+            		}
+    				
+    				System.out.println("Ha comprado: " + comprado);
             	}
             		break;
             	}

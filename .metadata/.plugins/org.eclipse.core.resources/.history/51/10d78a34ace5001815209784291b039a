@@ -71,7 +71,6 @@ public class Sistema {
 		
 		Scanner entrada1 = new Scanner(System.in);
         char opcion;
-        int opcion2;
         char continuar;
         String comprado = null;
         
@@ -232,9 +231,62 @@ public class Sistema {
             		}
             		
                     System.out.println("Por favor, seleccione el producto que quiera comprar: ");
-                    System.out.println("Ha comprado: " + listaProductosAl[opcion2=entrada1.nextInt()].getNombre());
+        			opcion= entrada1.next().charAt(0);
         			
     				
+    				for(Producto p : listaProductosAl) {
+            			comprado = p.getNombre();
+            		}
+    				
+    				System.out.println("Ha comprado: " + comprado);
+    				
+        			
+        			switch(opcion) {
+        			
+	        			case '1':
+	        			{
+	        				
+	                        
+	        			}
+	        				break;
+	        				
+	        			case '2':
+	        			{
+	        				
+	                        
+	        			}
+	        				break;
+	        				
+	        			case '3':
+	        			{
+	        				
+	        			}
+	        				break;
+	        				
+	        			case '4':
+	        			{
+	        				
+	        			}
+	        				break;
+	        				
+	        			case '5':
+	        			{
+	        				
+	        			}
+	        				break;
+	        				
+	        			case '6':
+	        			{
+	        				
+	        			}
+	        				break;
+	        				
+        			}
+        			
+        			
+        			
+        			
+        			
                     System.out.println("+----------------------------------------------+");
                     //-----------
                     System.out.println("¿Quiere continuar con el Programa [Y]Si, [N] No?");
@@ -262,12 +314,19 @@ public class Sistema {
             		
                     
                     System.out.println("Por favor, seleccione el producto que quiera comprar: ");
-                    System.out.println("Ha comprado: " + listaProductosAl[opcion2=entrada1.nextInt()].getNombre());
+        			opcion= entrada1.next().charAt(0);
+        			
+
+    				
+    				for(Producto p : listaProductosAl) {
+            			comprado = p.getNombre();
+            		}
+    				
+    				System.out.println("Ha comprado: " + comprado);
     				
     				
             	}
             		break;
-            		
             	case '3':
             	{
             		//LIMPIEZA
@@ -286,7 +345,7 @@ public class Sistema {
             		}
                     
                     System.out.println("Por favor, seleccione el producto que quiera comprar: ");
-                    System.out.println("Ha comprado: " + listaProductosAl[opcion2=entrada1.nextInt()].getNombre());
+        			opcion= entrada1.next().charAt(0);
             	}
             		break;
             	}

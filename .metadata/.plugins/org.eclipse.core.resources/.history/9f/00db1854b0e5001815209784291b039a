@@ -71,7 +71,6 @@ public class Sistema {
 		
 		Scanner entrada1 = new Scanner(System.in);
         char opcion;
-        int opcion2;
         char continuar;
         String comprado = null;
         
@@ -232,9 +231,12 @@ public class Sistema {
             		}
             		
                     System.out.println("Por favor, seleccione el producto que quiera comprar: ");
-                    System.out.println("Ha comprado: " + listaProductosAl[opcion2=entrada1.nextInt()].getNombre());
+                    System.out.println("Ha comprado: " + listaProductosAl[1].getNombre());
         			
     				
+    				
+    			
+        			
                     System.out.println("+----------------------------------------------+");
                     //-----------
                     System.out.println("¿Quiere continuar con el Programa [Y]Si, [N] No?");
@@ -262,7 +264,15 @@ public class Sistema {
             		
                     
                     System.out.println("Por favor, seleccione el producto que quiera comprar: ");
-                    System.out.println("Ha comprado: " + listaProductosAl[opcion2=entrada1.nextInt()].getNombre());
+        			opcion= entrada1.next().charAt(0);
+        			
+
+    				
+    				for(Producto p : listaProductosPer) {
+            			comprado = p.getNombre();
+            		}
+    				
+    				System.out.println("Ha comprado: " + comprado);
     				
     				
             	}
@@ -286,7 +296,13 @@ public class Sistema {
             		}
                     
                     System.out.println("Por favor, seleccione el producto que quiera comprar: ");
-                    System.out.println("Ha comprado: " + listaProductosAl[opcion2=entrada1.nextInt()].getNombre());
+        			opcion= entrada1.next().charAt(0);
+        			
+        			for(Producto p : listaProductosLim) {
+            			comprado = p.getNombre();
+            		}
+    				
+    				System.out.println("Ha comprado: " + comprado);
             	}
             		break;
             	}
