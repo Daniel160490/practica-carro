@@ -174,34 +174,25 @@ public class Sistema {
 	                    System.out.println("El stock es: " + listaProductosAl[opcionListaPro].getStock());	                    
 	                    
 	                    System.out.println("Cuanto Stock desea tener en el producto");
-	                    stock= entrada1.nextInt();	                  
+	                    stock= entrada1.nextInt();	
 	                    
-	                    listaProductosAl[opcionListaPro].setStock(stock);
+	                    if (listaProductosAl[opcionListaPro].getStock() < stock) {
+	                    	 listaProductosAl[opcionListaPro].setStock(stock);
+	 	                    
+	 	                    System.out.println("Stock actual: " + listaProductosAl[opcionListaPro].getStock());
+	                    	
+	                   		
+						} else {
+							System.out.println("Esta opcion solo es para aumentar stock");
+							
+						}
 	                    
-	                    System.out.println("Stock actual: " + listaProductosAl[opcionListaPro].getStock());
-	                    //listaProductosAl[opcion2].setStock(listaProductosAl[opcion2].getStock()-1);
+	                  
 	                    
 	                	
 	                    
 	                    
-//	                    
-//	                    for(Producto p : listaProductosAl) {
-//	            			System.out.println(p.toString());
-//	            		}
-//	            		
-//	                    System.out.println("Por favor, seleccione el producto que quiera comprar: ");
-//	                    System.out.println("Ha comprado: " + listaProductosAl[opcion2=entrada1.nextInt()].getNombre());
-//	                    /*
-//	                     * Esto disminuye el stock de los productos
-//	                     */
-//	                    listaProductosAl[opcion2].setStock(listaProductosAl[opcion2].getStock()-1);
-//	                    System.out.println("El stock ahora es: " + listaProductosAl[opcion2].getStock());
-//	                  
-//	    				
-//	                    System.out.println("+----------------------------------------------+");
-//	                    //-----------
-//	                    System.out.println("¿Quiere continuar con el Programa [Y]Si, [N] No?");
-//	                    opcion=entrada1.next().charAt(0);
+
 	                    
 	                    
 	                }
@@ -211,6 +202,28 @@ public class Sistema {
 	                {
 	                	
 	                	//Mostrar la lista de productos para decir los que se quieren disminuir
+	                	for(Producto p : listaProductosAl) {
+	            			System.out.println(p.toString());
+	            		}
+	            		
+	                    System.out.println("Por favor, seleccione el producto que quiera disminuir su stock: ");
+	                    opcionListaPro = entrada1.nextInt();
+	                    System.out.println("Ha pulsado: " + listaProductosAl[opcionListaPro].getNombre());
+	                    System.out.println("El stock es: " + listaProductosAl[opcionListaPro].getStock());	                    
+	                    
+	                    System.out.println("Cuanto Stock desea tener en el producto");
+	                    stock= entrada1.nextInt();	  
+	                    
+	                    if (listaProductosAl[opcionListaPro].getStock() > stock) {
+	                    	 listaProductosAl[opcionListaPro].setStock(stock);
+	 	                    
+	 	                    System.out.println("Stock actual: " + listaProductosAl[opcionListaPro].getStock());
+	                    	
+	                   		
+						} else {
+							System.out.println("Esta opcion solo es para disminuir stock");
+							
+						}
 	       
                         
 	                }
@@ -219,6 +232,7 @@ public class Sistema {
 	                case '3':
 	                {
 	                	//Guardar el historial de compras
+	                	 System.out.println("Mostrando ");
 	                }
 	                break;
 	                
